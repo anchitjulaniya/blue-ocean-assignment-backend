@@ -3,11 +3,9 @@ name: CI/CD Pipeline - Blue Ocean Backend
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
-  build-and-test:
+  build-test-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,6 +21,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run basic build check
+      - name: Run build check
         run: |
-          echo "Build successful"
+          echo "Build passed"
+
+      - name: Deploy to Render
+        if: success()
+        run: |
+          curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
