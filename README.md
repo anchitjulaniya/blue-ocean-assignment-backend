@@ -17,32 +17,6 @@ This project demonstrates **real-world backend architecture**, clean code struct
 
 ---
 
-## 📁 Project Structure
-
-src/
-├── controllers/
-│ ├── category.controller.js
-│ ├── subcategory.controller.js
-│ └── course.controller.js
-├── models/
-│ ├── category.model.js
-│ ├── subcategory.model.js
-│ └── course.model.js
-├── routes/
-│ ├── category.routes.js
-│ ├── subcategory.routes.js
-│ └── course.routes.js
-├── middlewares/
-│ ├── error.middleware.js
-│ └── validateId.middleware.js
-├── utils/
-│ ├── apiFeatures.js
-│ └── AppError.js
-├── app.js
-└── server.js
-
----
-
 ## ✨ Key Features
 
 ### CRUD Operations
