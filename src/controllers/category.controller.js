@@ -41,6 +41,7 @@ const getAllCategories = async (req, res, next) => {
       success: true,
       page,
       limit,
+      total,
       count: categories.length,
       data: categories
     });
