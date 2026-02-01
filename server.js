@@ -8,7 +8,7 @@ const subCategoryRoutes = require('./src/routes/subcategory.routes')
 const courseRoutes = require('./src/routes/course.routes')
 const errorMiddleware = require('./src/middlewares/error.middleware');
 const { StatusCodes } = require('http-status-codes');
-const PORT = process.env.PORT || 5000
+const PORT = Number(process.env.PORT) || 5000
 env.config();
 
 app.use(cors());
