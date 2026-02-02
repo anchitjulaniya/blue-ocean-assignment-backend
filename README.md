@@ -5,7 +5,7 @@ A production-ready backend application built using **ExpressJS** and **MongoDB (
 This project demonstrates **real-world backend architecture**, clean code structure, and strong data integrity handling.
 
 ---
-## url - https://blue-ocean-assignment-backend.onrender.com
+## Live URL - https://blue-ocean-assignment-backend.onrender.com
 
 ## 🚀 Tech Stack
 
@@ -67,6 +67,19 @@ npm run dev
 
 🧑‍💻 How to Use the APIs
 
+
+---
+
+## 🔍 Health Check API
+
+
+Response:
+```
+{
+  "status": "OK"
+}
+```
+
 1. Create Categories
 
   
@@ -76,13 +89,13 @@ Categories are the top-level entities.
 Create categories before creating subcategories or courses.
 
 POST /api/v1/categories
-
+```
 {
 
   "name": "Development"
 
 }
-
+```
 2. Create SubCategories (Under Category)
 
   
@@ -90,13 +103,13 @@ POST /api/v1/categories
 Each SubCategory must belong to a valid Category.
 
 POST /api/v1/subcategories/category/:categoryId
-
+```
 {
 
   "name": "Backend Development"
 
 }
-
+```
 3. Create Courses
 
   
@@ -104,7 +117,7 @@ POST /api/v1/subcategories/category/:categoryId
 Courses can be linked to multiple Categories and SubCategories.
 
 POST /api/v1/courses
-
+```
 {
 
   "title": "Full Stack MERN Development",
@@ -116,7 +129,7 @@ POST /api/v1/courses
   "subCategories": \["subCategoryId1", "subCategoryId2"\]
 
 }
-
+```
 4. Get All Records (Pagination, Search, Sorting)
 
 GET /api/v1/categories?page=1&limit\=10&search\=dev&sort\=asc
@@ -144,7 +157,7 @@ Error Handling
   
 
 All APIs return a consistent error response:
-
+```
 {
 
   "success": false,
@@ -152,3 +165,7 @@ All APIs return a consistent error response:
   "message": "Error description"
 
 }
+```
+8. Health API
+
+GET /health
